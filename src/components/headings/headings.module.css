@@ -1,0 +1,28 @@
+.customHeading {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.heading-h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.heading-p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.heading-p-06 {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.heading-h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.33333;
+}

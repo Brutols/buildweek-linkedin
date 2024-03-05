@@ -1,0 +1,54 @@
+.linkedinButton {
+    border-radius: 30px;
+    padding: 0.4rem 1rem;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+.button-green {
+    border: unset;
+    color: white;
+    background-color: #01754f;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-green:hover {
+    background-color: #004C33;
+}
+
+.button-blue {
+    border: unset;
+    color: white;
+    background-color: #0a66c2;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-blue:hover {
+    background-color: #004182;
+}
+
+.button-blue-outline {
+    border: 1px solid #0a66c2;
+    color: #0a66c2;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-blue-outline:hover {
+    box-shadow: inset 0 0 0 1px #0a66c2;
+    background-color: #0a66c22c;
+}
+
+.button-grey-outline {
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    color: rgba(0, 0, 0, 0.9);
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-grey-outline:hover {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.1);
+}
