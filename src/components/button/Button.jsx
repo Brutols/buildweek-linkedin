@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./button.module.css";
 
-const CustomButton = ({ variant }) => {
+const CustomButton = ({ variant, text }) => {
   const variants = {
     green: "button-green",
     filledBlue: "button-blue",
@@ -11,7 +11,7 @@ const CustomButton = ({ variant }) => {
 
   return (
     <button className={`${styles.linkedinButton} ${styles[variants[variant]]}`}>
-      <span>Add profile section</span>
+      <span>{text}</span>
     </button>
   );
 };

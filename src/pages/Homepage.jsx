@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { Container } from "react-bootstrap";
 import Headings from "../components/headings/Headings";
+import MainLayout from "../layouts/MainLayout";
 
 const Homepage = () => {
   const [profiles, setProfiles] = useState([]);
@@ -27,10 +28,9 @@ const Homepage = () => {
 
   return (
     <>
-      <Container className="mt-5">
-        <CustomButton variant="outlinedBlue" text="Add Profile Section" />
-        <Headings variant="h1" text="Daniele Lorenzo Motta Locatelli" />
-      </Container>
+      <MainLayout>
+        
+      </MainLayout>
     </>
   );
 };

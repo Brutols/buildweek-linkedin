@@ -1,0 +1,13 @@
+.icon {
+    font-size: 24px;
+}
+
+.dropdown {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+}
+
+.myNavLink {
+    padding: 0;
+}
