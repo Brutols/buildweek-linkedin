@@ -11,7 +11,7 @@ const Homepage = () => {
   console.log(profiles);
   
   useEffect(() => {
-    dispatch(getProfiles())
+    dispatch(getProfiles("https://striveschool-api.herokuapp.com/api/profile/"))
   }, [dispatch]);
 
   return (

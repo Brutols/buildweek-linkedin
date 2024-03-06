@@ -7,10 +7,10 @@ const initialState = {
 
 export const getProfiles = createAsyncThunk(
     "profiles/GETProfiles",
-    async () => {
+    async (url) => {
         try {
             const res = await axios.get(
-                "https://striveschool-api.herokuapp.com/api/profile/",
+                url,
               {
                 headers: {
                   Authorization:

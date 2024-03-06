@@ -3,19 +3,23 @@ import ButtonLogout from "../components/buttonLogout/ButtonLogout";
 import MainLayout from "../layouts/MainLayout";
 import { useDispatch, useSelector } from "react-redux";
 import { allProfiles, getProfiles } from "../Slices/profilesSlice";
+import { useParams } from "react-router-dom";
 const ProfilePage = () => {
   const dispatch = useDispatch()
   const profiles = useSelector(allProfiles)
-  console.log(profiles);
+  const {id} = useParams()
+  console.log(id);
+
+  const url = `https://striveschool-api.herokuapp.com/api/profile/${id}`
 
   useEffect(() => {
-    dispatch(getProfiles())
-  }, [dispatch])
+    dispatch(getProfiles(url))
+  }, [dispatch, url])
 
   return (
     <>
       <MainLayout>
-        <div>CIAO SONO LA PROFILE PAGE</div>
+        <div>{profiles.name}</div>
         <ButtonLogout />
       </MainLayout>
     </>
