@@ -5,20 +5,21 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
+import profilesReducer from "./Slices/profilesSlice"
 
-// const reducers = combineReducers({
-  
-// })
+const reducer = combineReducers({
+  profilesData: profilesReducer,
+})
 
-// const store = configureStore({reducers})
+const store = configureStore({reducer})
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
+    <Provider store={store}>
     <App />
-    {/* </Provider> */}
+    </Provider>
   </React.StrictMode>
 );
 
