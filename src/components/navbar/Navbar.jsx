@@ -21,13 +21,10 @@ function MyNav() {
             />
           </Form>
         </div>
-        <div className="d-flex">
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav
-              className="me-auto my-2 my-lg-0 d-flex align-items-center"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
+              className="my-2 my-lg-0 d-flex align-items-center gap-3"
             >
               <ButtonIcon iconName="IoHome" text="Home"/>
               <ButtonIcon iconName="FaUserFriends" text="My Networks"/>
@@ -41,7 +38,6 @@ function MyNav() {
               </div>
             </Nav>
           </Navbar.Collapse>
-        </div>
       </Container>
     </Navbar>
   );
