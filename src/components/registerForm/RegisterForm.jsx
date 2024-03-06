@@ -16,6 +16,7 @@ const RegisterForm = ({profiles}) => {
             if (profile.name.trim().toLowerCase() === isForm.username.trim().toLowerCase() && profile.surname.trim().toLowerCase() === isForm.surname.trim().toLowerCase()) {
                 setIsFound(true);
                 localStorage.setItem("auth",JSON.stringify(profile._id))
+                //console.log(profile._id);
                 navigate(`/${profile._id}`)
                 
             }
