@@ -12,6 +12,7 @@ import Headings from "../headings/Headings";
 import ProfilePic from "../profilePic/ProfilePic";
 import { FaPlus } from "react-icons/fa";
 import { HiOutlinePencil } from "react-icons/hi2";
+import { BsThreeDots } from "react-icons/bs";
 
 const ButtonIcon = ({ iconName, text, isDropdown, isProfile }) => {
   const selectIcon = () => {
@@ -32,6 +33,8 @@ const ButtonIcon = ({ iconName, text, isDropdown, isProfile }) => {
         return <FaPlus className={styles.icon} />;
       case "HiOutlinePencil":
         return <HiOutlinePencil className={styles.icon} />;
+      case "BsThreeDots":
+        return <BsThreeDots  className={styles.icon} />;
       default:
         return <div>seleziona un icona</div>;
     }

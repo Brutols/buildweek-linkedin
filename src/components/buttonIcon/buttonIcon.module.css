@@ -1,19 +1,19 @@
 .icon {
-    font-size: 24px;
-    color: rgba(0, 0, 0, 0.6);
-    transition: all 0.2s ease-in-out;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease-in-out;
 }
 
 .icon:hover {
-    color: #000;
+  color: #000;
 }
 
 .dropdown {
-    font-size: 0.8rem;
-    color: rgba(0, 0, 0, 0.6);
-    font-weight: 400;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
 }
 
 .myNavLink {
-    padding: 0;
+  padding: 0 !important;
 }

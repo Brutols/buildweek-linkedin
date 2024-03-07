@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import { allExperiences, getExperiences } from "../Slices/experiencesSlice";
 import { Container } from "react-bootstrap";
 import ExperiencesCard from "../components/experiencesCard/ExperiencesCard";
+import Sidebar from "../components/sidebar/Sidebar";
 
 const ProfilePage = () => {
   const dispatch = useDispatch();
@@ -32,7 +33,9 @@ const ProfilePage = () => {
           <div className="col-9 p-5">
           <ExperiencesCard />
           </div>
-          <div className="col-3"></div>
+          <div className="col-3">
+          <Sidebar/>
+          </div>
         </Container>    
       </MainLayout>
     </>
