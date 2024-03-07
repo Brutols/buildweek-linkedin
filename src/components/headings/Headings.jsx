@@ -9,6 +9,7 @@ const Headings = ({variant, text}) => {
         p: "heading-p",
         p06: "heading-p-06",
         h2: "heading-h2",
+        h3: "heading-h3"
     }
 
   return (

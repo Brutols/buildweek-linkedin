@@ -3,7 +3,7 @@
 }
 
 .heading-h1 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.25;
 }
@@ -22,7 +22,13 @@
 }
 
 .heading-h2 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    line-height: 1.33333;
+    line-height: 1.25;
+}
+
+.heading-h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
 }

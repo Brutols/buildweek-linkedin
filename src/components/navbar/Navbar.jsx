@@ -8,8 +8,8 @@ import styles from "./navbar.module.css"
 
 function MyNav() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
+    <Navbar expand="lg" className="bg-white">
+      <Container className="px-5">
         <div className="d-flex">
           <FaLinkedin size="40px" color="#0a66c2" />
           <Form className="d-flex">

@@ -10,6 +10,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import styles from "./buttonIcon.module.css"
 import Headings from "../headings/Headings";
 import ProfilePic from "../profilePic/ProfilePic";
+import { FaPlus } from "react-icons/fa";
+import { HiOutlinePencil } from "react-icons/hi2";
 
 const ButtonIcon = ({ iconName, text, isDropdown, isProfile }) => {
   const selectIcon = () => {
@@ -26,6 +28,10 @@ const ButtonIcon = ({ iconName, text, isDropdown, isProfile }) => {
         return <FaBell className={styles.icon} />;
       case "CgMenuGridR":
         return <CgMenuGridR className={styles.icon} />;
+      case "FaPlus":
+        return <FaPlus className={styles.icon} />;
+      case "HiOutlinePencil":
+        return <HiOutlinePencil className={styles.icon} />;
       default:
         return <div>seleziona un icona</div>;
     }
@@ -37,7 +43,7 @@ const ButtonIcon = ({ iconName, text, isDropdown, isProfile }) => {
     <Nav.Link className={styles.myNavLink} >
       <div className="d-flex flex-column justify-content-center align-items-center">
         {selectIcon()}
-        <Headings variant="p06" text={text} />
+        {text && <Headings variant="p06" text={text} />}
       </div>
     </Nav.Link>}
 

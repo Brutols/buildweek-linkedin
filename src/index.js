@@ -6,9 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import profilesReducer from "./Slices/profilesSlice"
+import experiencesReducer from './Slices/experiencesSlice';
 
 const reducer = combineReducers({
   profilesData: profilesReducer,
+  experiencesData: experiencesReducer
 })
 
 const store = configureStore({reducer})
