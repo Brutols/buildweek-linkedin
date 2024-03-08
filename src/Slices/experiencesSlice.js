@@ -3,6 +3,8 @@ import axios from "axios";
 
 const initialState = {
   experiences: [],
+  works: [],
+  educations: [],
   isRefresh: false,
   show: false,
   formData: {
@@ -70,7 +72,28 @@ const experiencesSlice = createSlice({
       state.isRefresh = !state.isRefresh;
     },
     resetFormData: (state) => {
-      state.formData = initialState.formData
+      state.formData = initialState.formData;
+    },
+    filterSortExperiences: (state) => {
+      const worksToSort = []
+      const educationsToSort = []
+      state.experiences.filter((experience) => {
+        if (experience.area === "work") {
+          worksToSort.push(experience);
+        } else {
+          educationsToSort.push(experience);
+        }
+      });
+      state.works = worksToSort.sort((a, b) => {
+        const aDate = new Date(a.startDate);
+        const bDate = new Date(b.startDate);
+        return bDate - aDate;
+      });
+      state.educations = educationsToSort.sort((a, b) => {
+        const aDate = new Date(a.startDate);
+        const bDate = new Date(b.startDate);
+        return bDate - aDate;
+      });
     },
   },
   extraReducers: (builder) => {
@@ -88,7 +111,14 @@ export const allExperiences = (state) => state.experiencesData.experiences;
 export const isShow = (state) => state.experiencesData.show;
 export const allFormData = (state) => state.experiencesData.formData;
 export const isRefreshed = (state) => state.experiencesData.isRefresh;
-export const { setShow, setFormData, setIsRefresh, resetFormData } =
-  experiencesSlice.actions;
+export const allWorks = (state) => state.experiencesData.works;
+export const allEducations = (state) => state.experiencesData.educations;
+export const {
+  setShow,
+  setFormData,
+  setIsRefresh,
+  resetFormData,
+  filterSortExperiences,
+} = experiencesSlice.actions;
 
 export default experiencesSlice.reducer;

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import ButtonLogout from "../components/buttonLogout/ButtonLogout";
 import MainLayout from "../layouts/MainLayout";
 import { useDispatch, useSelector } from "react-redux";
-import { allProfiles, getProfiles } from "../Slices/profilesSlice";
+import { allProfiles, getProfiles, getAllProfiles } from "../Slices/profilesSlice";
 import { useParams } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import ExperiencesCard from "../components/experiencesCard/ExperiencesCard";
@@ -16,6 +16,7 @@ const ProfilePage = () => {
   const profilesUrl = `https://striveschool-api.herokuapp.com/api/profile/${id}`;
   useEffect(() => {
     dispatch(getProfiles(profilesUrl));
+    dispatch(getAllProfiles("https://striveschool-api.herokuapp.com/api/profile/"))
   }, [dispatch, profilesUrl]);
 
   return (

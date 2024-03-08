@@ -1,7 +1,31 @@
 .myInput {
-    border: 1px solid #0a66c2!important;
+  border: 1px solid #0a66c2 !important;
 }
 
 .myInput:focus {
-   box-shadow: inset 0 0 0 2px #0a66c2!important;
+  box-shadow: inset 0 0 0 2px #0a66c2 !important;
+}
+
+.searchDropdown {
+  width: 600px;
+  height: 30vh;
+  overflow-y: scroll;
+  background-color: #fff;
+  top: 55px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 50px 0px #000000;
+  box-shadow: 5px 5px 50px 0px #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+.d_none {
+    display: none;
+    opacity: 0;
+}
+
+.d_flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
