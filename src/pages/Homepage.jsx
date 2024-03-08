@@ -3,22 +3,22 @@ import React from "react";
 import MainLayout from "../layouts/MainLayout";
 import RegisterForm from "../components/registerForm/RegisterForm";
 import { useDispatch, useSelector } from "react-redux";
-import { allProfiles, getProfiles } from "../Slices/profilesSlice";
+import { trueAllProfiles, getAllProfiles } from "../Slices/profilesSlice";
 
 const Homepage = () => {
   const dispatch = useDispatch()
-  const profiles = useSelector(allProfiles)
-  console.log(profiles);
+  const allProfiles = useSelector(trueAllProfiles)
+  console.log(allProfiles);
   
   useEffect(() => {
-    dispatch(getProfiles("https://striveschool-api.herokuapp.com/api/profile/"))
+    dispatch(getAllProfiles("https://striveschool-api.herokuapp.com/api/profile/"))
   }, [dispatch]);
 
   return (
     <>
       <MainLayout>
         <RegisterForm
-          profiles = {profiles}
+          profiles = {allProfiles}
         />
       </MainLayout>
     </>
