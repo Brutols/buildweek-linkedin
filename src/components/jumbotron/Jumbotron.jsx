@@ -5,6 +5,8 @@ import styles from '../jumbotron/Jumbotron.module.css'
 import ButtonIcon from '../buttonIcon/ButtonIcon';
 import Headings from '../headings/Headings';
 import CustomButton from '../button/Button';
+import LinkJumbotron from '../link/LinkJumbotron';
+
 const Jumbotron = ({profile}) => {
     console.log(profile);
   return (
@@ -33,8 +35,7 @@ const Jumbotron = ({profile}) => {
                     <Row>
                         <Col 
                             xs={12}
-                            className='d-flex'
-                        >
+                            className='d-flex'>
                             <Headings variant={'h2'} text={`${profile.name}  ${profile.surname}`}/>
                             <CustomButton 
                                 className={'buttonIcon'}
@@ -49,10 +50,60 @@ const Jumbotron = ({profile}) => {
                                 text={`${profile.bio}`}
                             />
                         </Col>
+                        <Col xs ={12} className='d-flex align-items-center'>
+                            <Headings
+                                variant={'p'}
+                                text={`${profile.area}`}
+                            />
+                            <p className='ps-2 m-0'><LinkJumbotron text={'Informazioni di contatto'}/></p>
+                        </Col>
+                        <Col xs={12}>
+                            <p className='ps-2 m-0'><LinkJumbotron text={`${profile.username}`}/></p>
+                        </Col>
+                        <Col>
+                            <CustomButton variant={'filledBlue'} text={'Disponibile per'}/>
+                            <CustomButton variant={'outlinedBlue'} text={'Aggiungi sezione del profilo'}/>
+                            <CustomButton variant={'outlinedGrey'} text={'Altro'}/>
+                        </Col>
                     </Row>
                 </Col>
-                <Col className='d-none d-md-block col-md-6 col-lg-4 bg-primary' >
-                    pippo
+                <Col className='d-none d-md-block col-md-6 col-lg-4' >
+                    <ul>
+                        <li>Esperienza 1</li>
+                        <li>Esperienza 2</li>
+                    </ul>
+                </Col>
+            </Row>
+            <Row>
+            <Col xs={12}>
+                    <Row className='gap-1'>
+                        <Col className='border rounded-border-secondary rounded' xs={5}>
+                            <Headings
+                                variant={'h2'}
+                                text={'Bo'}
+                            />
+                            <Headings
+                                variant={'p'}
+                                text={'bobo'}
+                            />
+                            <LinkJumbotron
+                                text={'Mostra dettagli'}
+                            />
+                        </Col>
+                        <Col className='border rounded-border-secondary rounded' xs={5}>
+                        <Headings
+                                variant={'h2'}
+                                text={'Bo'}
+                            />
+                            <Headings
+                                variant={'p'}
+                                text={'bobo'}
+                            />
+                            <LinkJumbotron
+                                text={'Mostra dettagli'}
+                            />
+                        </Col>
+                    </Row>
                 </Col>
             </Row>
         </Container>

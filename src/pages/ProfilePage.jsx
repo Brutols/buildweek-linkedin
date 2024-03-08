@@ -19,7 +19,6 @@ const ProfilePage = () => {
   return (
     <>
       <MainLayout>
-        <div>{profiles.name}</div>
         <Jumbotron
           profile = {profiles}
         />
