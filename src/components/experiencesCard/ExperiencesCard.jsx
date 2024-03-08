@@ -13,6 +13,18 @@ const ExperiencesCard = ({ id, text, variant }) => {
 
   const experiencesUrl = `https://striveschool-api.herokuapp.com/api/profile/${id}/experiences`;
 
+  const formatDate = (isoDate) => {
+    const date = new Date(isoDate)
+
+    const options = {
+      year: "numeric",
+      month: "long"
+    }
+
+    const formattedDate = new Intl.DateTimeFormat("it-IT", options).format(date)
+    return formattedDate
+  }
+
   useEffect(() => {
     dispatch(getExperiences(experiencesUrl));
   }, [dispatch, isRefresh]);
@@ -21,7 +33,7 @@ const ExperiencesCard = ({ id, text, variant }) => {
     <div className="rounded bg-white d-flex flex-column p-3 my-2">
       <div className="d-flex justify-content-between align-items-center">
         <Headings variant="h2" text={text} />
-        <div className="d-flex">
+        <div className="d-flex gap-3">
           <AddExperience id={id} />
           <ButtonIcon iconName="HiOutlinePencil" />
         </div>
@@ -32,8 +44,8 @@ const ExperiencesCard = ({ id, text, variant }) => {
             <SingleExperience
               title={experience.role}
               company={experience.company}
-              startDate={experience.startDate}
-              endDate={experience.endDate}
+              startDate={formatDate(experience.startDate)}
+              endDate={formatDate(experience.endDate)}
               description={experience.description}
             />
           );
@@ -42,8 +54,8 @@ const ExperiencesCard = ({ id, text, variant }) => {
             <SingleExperience
               title={experience.role}
               company={experience.company}
-              startDate={experience.startDate}
-              endDate={experience.endDate}
+              startDate={formatDate(experience.startDate)}
+              endDate={formatDate(experience.endDate)}
               description={experience.description}
             />
           );
