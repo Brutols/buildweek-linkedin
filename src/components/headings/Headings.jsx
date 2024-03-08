@@ -3,7 +3,7 @@ import styles from "./headings.module.css"
 
 
 
-const Headings = ({variant, text}) => {
+const Headings = ({variant, text,className}) => {
     const variants = {
         h1: "heading-h1",
         p: "heading-p",
@@ -13,7 +13,7 @@ const Headings = ({variant, text}) => {
     }
 
   return (
-    <div className={`${styles.customHeading} ${styles[variants[variant]]}`}>{text}</div>
+    <div className={`${styles.customHeading} ${styles[variants[variant]]} ${styles[className]}`}>{text}</div>
   )
 }
 

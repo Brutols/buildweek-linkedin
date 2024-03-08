@@ -5,7 +5,11 @@ import { FaSuitcase } from "react-icons/fa";
 import { HiMiniChatBubbleLeftEllipsis } from "react-icons/hi2";
 import { FaBell } from "react-icons/fa";
 import { CgMenuGridR } from "react-icons/cg";
+import { FaPencilAlt } from "react-icons/fa";
+import { LuPencil } from "react-icons/lu";
+import { FaCamera } from "react-icons/fa";
 import { Nav } from "react-bootstrap";
+import { MdOutlineVerifiedUser } from "react-icons/md";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import styles from "./buttonIcon.module.css"
 import Headings from "../headings/Headings";
@@ -13,6 +17,7 @@ import ProfilePic from "../profilePic/ProfilePic";
 import { FaPlus } from "react-icons/fa";
 import { HiOutlinePencil } from "react-icons/hi2";
 import { BsThreeDots } from "react-icons/bs";
+
 
 const ButtonIcon = ({ iconName, text, isDropdown, isProfile }) => {
   const selectIcon = () => {
@@ -35,6 +40,14 @@ const ButtonIcon = ({ iconName, text, isDropdown, isProfile }) => {
         return <HiOutlinePencil className={styles.icon} />;
       case "BsThreeDots":
         return <BsThreeDots  className={styles.icon} />;
+      case "FaPencilAlt":
+          return <FaPencilAlt className={styles.icon}/>
+      case "FaCamera":
+          return <FaCamera className={styles.icon}/>
+      case "LuPencil":
+          return <LuPencil className={styles.icon}/>
+      case "MdOutlineVerifiedUser":
+          return <MdOutlineVerifiedUser className={styles.icon}/>
       default:
         return <div>seleziona un icona</div>;
     }

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ButtonLogout from "../components/buttonLogout/ButtonLogout";
 import MainLayout from "../layouts/MainLayout";
+import Jumbotron from "../components/jumbotron/Jumbotron";
 import { useDispatch, useSelector } from "react-redux";
 import { allProfiles, getProfiles } from "../Slices/profilesSlice";
 import { useParams } from "react-router-dom";
