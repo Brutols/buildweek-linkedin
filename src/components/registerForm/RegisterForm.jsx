@@ -43,7 +43,7 @@ const RegisterForm = ({ profiles }) => {
   };
 
   return (
-    <>
+    <div className="text-center">
       <form onSubmit={handleOnSubmit}>
         <input
           onChange={handleOnChange}
@@ -63,7 +63,7 @@ const RegisterForm = ({ profiles }) => {
         Bisogna inserire Il nome e il cognome con cui si è registrati su
         striverschool
       </p>
-    </>
+    </div>
   );
 };
 export default RegisterForm;

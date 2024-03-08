@@ -15,13 +15,11 @@ const Homepage = () => {
   }, [dispatch]);
 
   return (
-    <>
-      <MainLayout>
+    <div className="d-flex justify-content-center align-items-center" style={{height: "100vh"}}>
         <RegisterForm
           profiles = {allProfiles}
         />
-      </MainLayout>
-    </>
+    </div>
   );
 };
 

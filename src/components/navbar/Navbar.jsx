@@ -13,10 +13,13 @@ import {
 } from "../../Slices/profilesSlice";
 import Headings from "../headings/Headings";
 import ProfilePic from "../profilePic/ProfilePic";
+import { useNavigate } from "react-router-dom";
+import ButtonLogout from "../buttonLogout/ButtonLogout";
 
 function MyNav() {
   const filteredProfiles = useSelector(allFilteredProfiles);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [showSearch, setShowSearch] = useState(false);
   console.log(showSearch);
 
@@ -49,14 +52,27 @@ function MyNav() {
             className={`position-absolute ${styles.searchDropdown} ${
               showSearch ? styles.d_flex : styles.d_none
             }`}
-          >{filteredProfiles && filteredProfiles.map((profile, i) => {
-            return (
-              <div key={i} className="d-flex justify-content-between align-items-center p-2 border-bottom w-100">
-                <Headings variant="h2" text={`${profile.name} ${profile.surname}`} />
-                <ProfilePic width="32px" src={profile.image} />
-              </div>
-            )
-          })}</div>
+          >
+            {filteredProfiles &&
+              filteredProfiles.map((profile, i) => {
+                return (
+                  <div
+                    onClick={() => {
+                      navigate(`/profile/${profile._id}`)
+                      setShowSearch(false);
+                    }}
+                    key={i}
+                    className={`${styles.profileCard} d-flex justify-content-between align-items-center p-2 border-bottom w-100`}
+                  >
+                    <Headings
+                      variant="h2"
+                      text={`${profile.name} ${profile.surname}`}
+                    />
+                    <ProfilePic width="32px" src={profile.image} />
+                  </div>
+                );
+              })}
+          </div>
         </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
@@ -71,12 +87,13 @@ function MyNav() {
             <ButtonIcon iconName="FaBell" text="Notifications" />
             <ButtonIcon text="Me" isDropdown={true} isProfile={true} />
             {/* icona profilo */}
-            <div className="border-start">
+            <div className="border-start d-flex align-items-center">
               <ButtonIcon
                 iconName="CgMenuGridR"
                 text="For Business"
                 isDropdown={true}
               />
+              <ButtonLogout />
             </div>
           </Nav>
         </Navbar.Collapse>

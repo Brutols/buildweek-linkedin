@@ -11,7 +11,7 @@ const Jumbotron = ({profile}) => {
     console.log(profile);
   return (
     <>
-        <Container>
+        <Container className={`${styles.wrapper}`}>
             <Row> 
                 <Col 
                     className= {styles.cover}>
@@ -30,6 +30,7 @@ const Jumbotron = ({profile}) => {
                     <ButtonIcon iconName="LuPencil"/>   
                 </Col>
             </Row>
+            <div className='p-3'>
             <Row>
                 <Col className= 'col-12 col-md-6 col-lg-8 d-flex'>
                     <Row>
@@ -106,6 +107,7 @@ const Jumbotron = ({profile}) => {
                     </Row>
                 </Col>
             </Row>
+            </div>
         </Container>
     </>
   )

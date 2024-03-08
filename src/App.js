@@ -4,6 +4,7 @@ import './App.css';
 import Homepage from './pages/Homepage';
 import ProtectedRoutes from './middleware/ProtectedRoutes';
 import ProfilePage from './pages/ProfilePage';
+import SearchProfilePage from './pages/SearchProfilePage';
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
       <Route element={<ProtectedRoutes/>}>
         <Route path='/:id' element={<ProfilePage/>}/>
       </Route>
-
+      <Route path="/profile/:id" element={<SearchProfilePage />} />
       <Route path='*' element={""} />
     </Routes>
     </BrowserRouter>

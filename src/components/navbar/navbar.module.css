@@ -29,3 +29,11 @@
     justify-content: flex-start;
     align-items: center;
 }
+
+.profileCard {
+  cursor: pointer;
+}
+
+.profileCard:hover {
+  background-color: #0a66c22c;
+}

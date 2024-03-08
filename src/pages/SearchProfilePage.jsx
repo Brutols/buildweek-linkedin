@@ -8,7 +8,7 @@ import { Container } from "react-bootstrap";
 import ExperiencesCard from "../components/experiencesCard/ExperiencesCard";
 import Sidebar from "../components/sidebar/Sidebar";
 
-const ProfilePage = () => {
+const SearchProfilePage = () => {
   const dispatch = useDispatch();
   const profiles = useSelector(allProfiles);
   const { id } = useParams();
@@ -37,4 +37,4 @@ const ProfilePage = () => {
   );
 };
 
-export default ProfilePage;
+export default SearchProfilePage;
